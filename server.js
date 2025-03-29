@@ -3,7 +3,7 @@ const cors = require('cors');
 
 // Create express app
 const app = express();
-const PORT = 5000;
+const PORT = 80;
 
 // Middleware
 app.use(cors());
