@@ -35,28 +35,6 @@ jobs:
           if: steps.containerImage.outcome == 'failure'
           run: exit 1
 
-        - name: Setup Terraform
-          uses: hashicorp/setup-terraform@v2.0.2
-          with:
-            terraform_version: latest
-            cli_config_credentials_token: ${{ secrets.TFC_API_TOKEN }}
+ 
     
-        - name: Terraform Init
-          id: init
-          run: terraform init
-        
-        - name: Terraform Validate
-          id: validate
-          run: terraform validate
-  
-        - name: Terraform Plan
-          id: plan
-          run: terraform plan
-          continue-on-error: true
-  
-        - name: Terraform Plan Status
-          if: steps.plan.outcome == 'failure'
-          run: exit 1
-  
-        - name: Terraform Apply
-          run: terraform apply -auto-approve
+     
