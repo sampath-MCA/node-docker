@@ -16,7 +16,7 @@ app.get('/', async (req, res) => {
   res.send('hi hello')
 });
 
-// POST endpoint to create a new item
+// https://github.com/CumulusCycles/AWS_Terraform_CI_CD_demo/blob/main/src/modules/tf-state/main.tfPOST endpoint to create a new item
 
 // Start server
 app.listen(PORT, () => {
